@@ -1,0 +1,7 @@
+build
+coverage
+dist
+node_modules
+public/static/*
+public/docs.html
+public/docs/*
