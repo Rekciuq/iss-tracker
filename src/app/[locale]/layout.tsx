@@ -43,7 +43,7 @@ export default function RootLayout({
   const messages = useMessages();
   return (
     <html lang={locale} className={cn("scroll-smooth", montserrat.className)}>
-      <body className="bg-background flex min-h-screen flex-col antialiased">
+      <body className="mx-auto flex h-full min-h-screen w-full flex-col items-center justify-center bg-background text-[1.25rem] font-medium antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>{children}</Providers>
         </NextIntlClientProvider>

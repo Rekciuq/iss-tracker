@@ -17,6 +17,18 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        "fade-out": {
+          "0%": { opacity: "1" },
+          "100%": {
+            opacity: "0",
+            display: "none",
+          },
+        },
+      },
+      animation: {
+        "fade-out": "fade-out 1s forwards",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -1,1 +1,10 @@
-{}
+{
+  "main-page": {
+    "location": {
+      "header": "ISS is now located at:",
+      "location": "longtitude: {long},\nlattitude: {lat}"
+    },
+    "time": "Current UTC time: {time}",
+    "total-people-amount": "Total amount: {total} people on ISS"
+  }
+}
