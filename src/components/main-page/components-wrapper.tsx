@@ -38,10 +38,12 @@ export function ComponentsWrapper() {
       setDateTime(fullDate);
     };
 
-    fetchPeopleInISS();
+    setTimeout(() => {
+      fetchPeopleInISS();
+    }, 2500);
     fetchISSPosition();
     updateDateTime();
-    const peopleInterval = setInterval(fetchPeopleInISS, 62500);
+    const peopleInterval = setInterval(fetchPeopleInISS, 7500);
     const positionInterval = setInterval(fetchISSPosition, 5000);
     const timeInterval = setInterval(updateDateTime, 5000);
 

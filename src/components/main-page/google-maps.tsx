@@ -13,7 +13,6 @@ export function GoogleMaps({ ISSPosition }: IGoogleMapsProps) {
     lat: Number(ISSPosition.latitude),
     lng: Number(ISSPosition.longitude),
   };
-  console.log(mapFocus);
   return (
     <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!}>
       <div className="max-xl:col-span-2 max-xl:h-[600px] max-lg:col-span-1">

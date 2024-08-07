@@ -1,10 +1,10 @@
 {
   "ISSPosition": {
     "message": "success",
-    "timestamp": 1722978445,
+    "timestamp": 1722982211,
     "iss_position": {
-      "longitude": "149.0441",
-      "latitude": "-3.0256"
+      "longitude": "2.2499",
+      "latitude": "-42.6057"
     }
   },
   "peopleInSpace": {

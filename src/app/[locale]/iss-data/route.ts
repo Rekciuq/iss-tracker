@@ -8,9 +8,9 @@ const ISSPositionAPI = "http://api.open-notify.org/iss-now.json";
 type TDataType = "people" | "position";
 
 export async function GET(request: NextRequest) {
-  const { searchParams } = new URL(request.url);
-  const type = searchParams.get("type");
   try {
+    const { searchParams } = new URL(request.url);
+    const type = searchParams.get("type");
     let apiURL;
     if (type === "people") {
       apiURL = peopleInSpaceAPI;
@@ -25,10 +25,11 @@ export async function GET(request: NextRequest) {
 
     const response = await axios.get(apiURL);
 
-    FallbackService.updateRecords(type, { ...response.data });
+    // FallbackService.updateRecords(type, { ...response.data });
     return NextResponse.json(response.data, { status: 200 });
   } catch (error) {
-    const fallbackData = FallbackService.readRecords(type as TDataType);
-    return NextResponse.json({ fallbackData }, { status: 500 });
+    // const fallbackData = FallbackService.readRecords(type as TDataType);
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
+    // return NextResponse.json({ fallbackData }, { status: 500 });
   }
 }
